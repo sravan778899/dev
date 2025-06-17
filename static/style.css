@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease-out;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+    text-align: center;
+}
+
+button, .form-select {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .form-select:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(100, 100, 255, 0.3);
+}
+
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    background: #f5f5f5;
+    padding: 20px;
+    border-left: 5px solid #6a11cb;
+    animation: typing 1s steps(40) 1;
+    overflow-x: auto;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0 }
+    to { transform: translateY(0); opacity: 1 }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #6a11cb, 0 0 15px #2575fc;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #6a11cb, 0 0 30px #2575fc;
+    }
+}
