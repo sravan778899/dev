@@ -40,4 +40,4 @@ def download():
     return send_file(file_stream, as_attachment=True, download_name="art.txt", mimetype="text/plain")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=5000)
